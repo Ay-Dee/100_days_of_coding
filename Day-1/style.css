@@ -1,0 +1,106 @@
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --main-bg-color : hsl(30, 38%, 92%);
+    --card-bg-color : hsl(0, 0%, 100%);
+    --dark-cyan : hsl(158, 36%, 37%);
+    --primary-text-color : hsl(228, 12%, 48%);
+    --heading-color : hsl(212, 21%, 14%);
+}
+
+main {
+    width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--main-bg-color);
+}
+
+
+.container {
+    position: relative;
+    max-width: 600px;
+    height: 450px;
+    background: var(--card-bg-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+img {
+    height: 100%;
+    border-radius: 10px 0 0 10px;
+}
+
+.content {
+    height: 100%;
+    padding: 30px;
+}
+
+p {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--primary-text-color);
+    font-size: 15px;
+    font-weight: 400
+}
+
+p.hero {
+    text-transform: uppercase;
+    font-size: 15px;
+}
+
+.title {
+    line-height: 1;
+    font-weight: 700;
+    font-family: 'Fraunces', sans-serif;
+    margin: 20px 0;
+}
+
+.price {
+    margin: 20px 0;
+    display: flex;
+}
+
+.main-price{
+    font-family: 'Frances', sans-serif;
+    color: var(--dark-cyan);
+}
+
+.discount {
+    display: inline-block;
+    margin: auto;
+    text-decoration: line-through;
+    color: var(--primary-text-color);
+}
+
+.button {
+    display: block;
+    width: 100%;
+    padding: 20px;
+    color: var(--card-bg-color);
+    font-size: 15px;
+    background: var(--dark-cyan);
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.button:hover {
+    cursor: pointer;
+    background: hsl(158, 34%, 27%);
+}
+
+/* button effect */
+
+.attribution {
+    top: 0;
+}

@@ -11,7 +11,6 @@
     --link-hover-color : hsl(159, 36%, 30%);
     --primary-text-color : hsl(228, 12%, 48%);
     --heading-color : hsl(212, 21%, 14%);
-    --Fraunces : url(static/Fraunces_72pt-Bold.ttf)
 }
 
 body {

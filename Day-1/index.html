@@ -6,40 +6,58 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fraunces">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'> <!-- Imports icons from Boxicons website -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&display=swap" rel="stylesheet"> <!-- Imports 'Fraunces' font of font-weight 700 -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap" rel="stylesheet"> <!-- Imports 'Montserrat' font of font-weight 400 and 700 -->
+  
  
   <title>Frontend Mentor | Product preview card component</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
 <body>
   <main>
     <div class="container">
-      <img class="img-fluid" src="images/image-product-desktop.jpg" alt="Gabrielle Chanel Perfume">
-    
-      <div class="content">
-        <p class="hero">P e r f u m e</p>
-        <h1 class="title"><b>Gabrielle</b><br/><b>Essence Eau</b><br/><b>De Parfum</b></h1>
-        <p class="desc">
-          A floral, solar and voluptuous interpretation composed by Olivier Polge, Perfumer-Creator for the House of CHANEL.
-        </p>
+      <div class="wrapper">
 
-        <div class="price">
-          <span class="main-price"><h1>$149.99</h1></span><div class="discount"><span>$169.99</span></div>
+        <div class="left">
+          <img class="image img-desktop" src="images/image-product-desktop.jpg" alt="Gabrielle Chanel Perfume"> <!-- Image for desktop view -->
+          <img class="image img-mobile" src="images/image-product-mobile.jpg" alt="Gabrielle Chanel Perfume"> <!--  Image for mobile view -->
         </div>
+
+        <!-- End of image section -->
   
-        <button class="button">Add to Cart</button> 
-      </div> 
+        <div class="right">
+          <div class="content">
+            <p class="hero">P E R F U M E</p>
+            <h1 class="title"><b>Gabrielle Essence Eau De Parfum</b></h1>
+            <p class="desc">
+              A floral, solar and voluptuous interpretation composed by Olivier Polge, Perfumer-Creator for the House of CHANEL.
+            </p>
+  
+            <div class="price">
+              <h1 class="new-price">$149.99</h1>
+              <p class="old-price">$169.99</p>
+            </div>
+          
+            <a class="btn" href="#">
+              <i class='bx bx-cart-alt bx-sm'></i>
+              <span>Add to Cart</span>
+            </a>
+          </div>          
+        </div>
+      </div>
+
+      <div class="attribution"> <!-- Copyright mark -->
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a href="#">Ahmed Dosunmu</a>.
+      </div>
     </div>
+
+    
   </main>
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a href="#">Ahmed Dosunmu</a>.
-  </div>
+  
     
       
 </body>

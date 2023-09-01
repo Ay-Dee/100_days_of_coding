@@ -1,6 +1,6 @@
+@import 'images/image-product-mobile.jpg';
+
 *, *::after, *::before {
-    margin: 0;
-    padding: 0;
     box-sizing: border-box;
 }
 
@@ -10,97 +10,186 @@
     --dark-cyan : hsl(158, 36%, 37%);
     --primary-text-color : hsl(228, 12%, 48%);
     --heading-color : hsl(212, 21%, 14%);
+    --Fraunces : url(static/Fraunces_72pt-Bold.ttf)
+}
+
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
 }
 
 main {
-    width: 100%;
-    min-height: 100vh;
+    background: var(--main-bg-color);
+    height: 100vh;
+    width: 100% ;
     overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--main-bg-color);
 }
 
-
 .container {
-    position: relative;
-    max-width: 600px;
-    height: 450px;
-    background: var(--card-bg-color);
     display: flex;
+    flex-direction: column;
+    gap: 10px;
     align-items: center;
     justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+
+.wrapper {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    height: 450px;
+    align-items: center;
+    justify-content: center;
+    background: var(--card-bg-color);
     border-radius: 10px;
 }
 
-img {
+.wrapper .left {
     height: 100%;
+    width: 50%;
+    position: relative;
+}
+
+.wrapper .right {
+    height: 100%;
+    width: 50%;
+    padding: 20px 36px;
+}
+
+.image.img-desktop {
+    position: absolute;
+    height: 100%;
+    width: 100%;
     border-radius: 10px 0 0 10px;
 }
 
-.content {
-    height: 100%;
-    padding: 30px;
+.img-mobile {
+    display: none;
 }
 
-p {
+.desc {
+    line-height: 150%;
+}
+
+.wrapper .right .content {
+    top: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.wrapper .right .content h1 {
+    font-family: var(--Fraunces);
+    font-weight: 700;
+}
+
+.wrapper .right .content .title {
+    line-height: 100%;
+    color: var(--heading-color);
+}
+
+.wrapper .right .content p {
+    font-size: 14px;
     font-family: 'Montserrat', sans-serif;
     color: var(--primary-text-color);
-    font-size: 15px;
-    font-weight: 400
-}
-
-p.hero {
-    text-transform: uppercase;
-    font-size: 15px;
-}
-
-.title {
-    line-height: 1;
-    font-weight: 700;
-    font-family: 'Fraunces', sans-serif;
-    margin: 20px 0;
 }
 
 .price {
-    margin: 20px 0;
     display: flex;
+    gap: 20px;
+    align-items: center;
 }
 
-.main-price{
-    font-family: 'Frances', sans-serif;
+.new-price {
     color: var(--dark-cyan);
 }
 
-.discount {
-    display: inline-block;
-    margin: auto;
+.old-price {
     text-decoration: line-through;
-    color: var(--primary-text-color);
 }
 
-.button {
-    display: block;
-    width: 100%;
-    padding: 20px;
-    color: var(--card-bg-color);
-    font-size: 15px;
+.btn {
+    padding: 15px 20px;
     background: var(--dark-cyan);
-    outline: none;
-    border: none;
+    display: flex;
+    text-decoration: none;
+    gap: 10px;
+    font-weight: bold;
     border-radius: 10px;
-    font-weight: 700;
-    font-family: 'Montserrat', sans-serif;
+    color: var(--card-bg-color);
+    width: 100%;
+    align-items: center;
+    justify-content: center;
 }
-
-.button:hover {
-    cursor: pointer;
-    background: hsl(158, 34%, 27%);
-}
-
-/* button effect */
 
 .attribution {
-    top: 0;
+    background: var(--card-bg-color);
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 11px; 
+    text-align: center;
+}
+
+.attribution a {
+    text-decoration: none;
+    font-weight: 500;
+    color: var(--dark-cyan);
+}
+
+@media (max-width: 650px) {
+    .container {
+        padding: 15px;
+        overflow-y: scroll;
+    }
+    .wrapper {
+        flex-direction: column;
+        max-width: 300px;
+        height: 550px;
+    }
+
+    .wrapper .left {
+        height: 40%;
+        width: 100%;
+    }
+
+    .wrapper .right {        
+        height: 60%;
+        width: 100%;
+    }
+
+    .hero {
+        margin-top: 0;
+    }
+
+    .img-desktop {
+        display: none;
+    }
+
+    .img-mobile {
+        display: block;
+        border-radius: 10px 10px 0 0;
+        height: 100%;
+        width: 100%;
+    }
+
+    .wrapper .right {
+        padding: 10px;
+    }
+
+    .wrapper .right .content {
+        padding: 10px;
+    }
+
+    .wrapper .right .content p {
+        font-size: 10px;
+    }
+
+    .wrapper .right .content h1 {
+        font-size: 25px;
+    }
+
+    .btn {
+        padding: 10px;
+    }
 }
